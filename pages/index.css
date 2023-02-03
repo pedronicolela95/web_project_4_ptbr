@@ -1,0 +1,5 @@
+/* normalizing the webpage */ 
+@import url(/vendor/normalize.css);
+
+/* setting default settings */ 
+@import url(/blocks/root/root.css);
