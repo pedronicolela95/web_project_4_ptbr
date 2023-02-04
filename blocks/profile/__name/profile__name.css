@@ -1,0 +1,6 @@
+.profile__name{
+    grid-area: name; 
+    font-weight: 500;
+    font-size: min(42px, calc(3.57vw + 10.57px));
+    line-height: min(48px, calc(3.75vw + 15px));
+}

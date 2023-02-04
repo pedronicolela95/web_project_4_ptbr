@@ -1,0 +1,16 @@
+.profile__edit-button{
+    grid-area: edit-button;
+    cursor: pointer;
+
+    margin: auto;
+    width: min(24px, calc(1.07vw + 14.57px));
+    
+    display: flex;
+    align-self: center;
+
+    transition: opacity linear 0.5s;
+}
+
+.profile__edit-button:hover{
+    opacity: 0.6;
+}

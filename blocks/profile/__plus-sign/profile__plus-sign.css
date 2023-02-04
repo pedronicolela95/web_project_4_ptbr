@@ -1,0 +1,4 @@
+.profile__plus-sign{
+    margin: auto;
+    width: min(22px, calc(1.07vw + 12.57px))
+}
