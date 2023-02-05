@@ -7,7 +7,7 @@
 
 @media screen and (max-width: 880px) {
     .header__image {
-      margin-left: calc( -4.82vw + 42.43px); /* from 0px in 880px view width to 27px in 320px view width */
+      margin-left: calc(-4.82vw + 42.43px); /* from 0px in 880px view width to 27px in 320px view width */
     }
     
 }

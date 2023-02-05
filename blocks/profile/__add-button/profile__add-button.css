@@ -1,13 +1,15 @@
 .profile__add-button{
     cursor: pointer;
     width: 150px;
-    height: 50px;
-    transition: opacity linear 0.5s;
-    box-sizing: border-box;
+    height: 50px; /* fixed height */ 
+    
+    box-sizing: border-box; /* using this property to count the border width inside the width and height values */ 
     border: 2px solid white;
 
     position: absolute;
-    right: 0;
+    right: 0; /* align it to the left */ 
+
+    transition: opacity linear 0.5s;
 }
 
 .profile__add-button:hover{
@@ -17,7 +19,7 @@
 @media screen and (max-width: 650px) {
     .profile__add-button {
         width: 88.125vw;
-        position: relative;
+        position: relative; /* disconsidering alignment */ 
         margin-top: 36px;
     }
 }

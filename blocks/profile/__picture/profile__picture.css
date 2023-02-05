@@ -1,4 +1,4 @@
 .profile__picture{
-    width: 120px;
+    width: 120px; /* the width doesn't change */ 
     margin: 0;
 }
