@@ -9,3 +9,7 @@
 
   font-family: "Inter", sans-serif; /*using font imported from https://rsms.me/inter/ */ 
 }
+
+button{
+  background-color: transparent;
+}
