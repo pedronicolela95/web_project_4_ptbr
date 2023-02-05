@@ -60,8 +60,9 @@ closeButton.addEventListener('click', OpenCloseForm);
 submitButton.addEventListener('click', handleProfileFormSubmit);
 
 // pressing enter
-document.addEventListener('keyup', function(event) {
-    if (event.key === 'Enter' && form.classList.contains('form__active')) {
+document.addEventListener('keyup', function(evt) {
+    if (evt.key === 'Enter' && form.classList.contains('form__active')) {
+        evt.preventDefault(); // Prevent to redirect to other webpage
         submitButton.click();
     }
   });

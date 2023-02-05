@@ -2,9 +2,29 @@
 
 ### Visão geral
 
+
+* Autor
+* Introdução
+* Objetivos
+* Tecnologias utilizadas
+* Página do github
 * Figma
 * Imagens
-* Descrição
+
+**Autor**
+Pedro Nicolela em janeiro de 2023.
+
+**Introdução**
+Nesse projetos construimos uma tela semelhante a uma rede social, em que o usuário compartilhou 6 fotos. Essa página web é responsiva e você pode editar o nome e descrição do usuário a partir de um pop-up.
+
+**Objetivos**
+Projeto objetivas aplicar os conhecimentos básicos de JavaScript obtidos no bootcamp Practicum.
+
+**Tecnologias utilizadas**
+Foram utilizadas HTML, CSS e JS!
+
+**Página do Github**
+Caso queira checar mais, veja: https://pedronicolela95.github.io/web_project_4_ptbr/
 
 **Figma**
 
@@ -12,6 +32,4 @@
 
 **Imagens**
 
-A maneira como você fará isso no trabalho é exportando imagens diretamente do Figma — recomendamos fazer isso para praticar mais. Não se esqueça de otimizá-los [aqui](https://tinypng.com/), para que seu projeto carregue mais rápido.
-
-Divirta-se com JavaScript!
+Imagens foram obtidas pelo próprio Bootcamp e otimizadas [aqui](https://tinypng.com/).
