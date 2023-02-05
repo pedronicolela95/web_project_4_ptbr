@@ -1,0 +1,19 @@
+.post__like-button{
+    background-color: transparent;
+    border: transparent;
+
+    margin: 0px;
+    position: absolute;
+    right: 18px;
+    bottom: 30px;
+
+    cursor: pointer;
+
+    transition: opacity linear 0.5s;
+
+}
+
+.post__like-button:hover{
+    opacity: 0.5;
+}
+

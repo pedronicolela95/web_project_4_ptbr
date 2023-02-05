@@ -1,0 +1,11 @@
+.posts{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+    margin-top: min(50px, calc(2.5vw + 28px));
+    row-gap: 20px;
+    column-gap: 5px;
+    
+}

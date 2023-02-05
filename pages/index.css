@@ -2,16 +2,16 @@
 @import url(/vendor/normalize.css);
 
 /* importing fonts */
-@import url(../fonts/inter/inter.css);
+@import url(/fonts/inter/inter.css);
 
-/* setting default settings */ 
+/* default settings */ 
 @import url(/blocks/root/root.css);
 
-/* setting header's settings */
+/* header's settings */
 @import url(/blocks/header/header.css);
 @import url(/blocks/header/__image.css/header__image.css);
 
-/* setting profile's section settings */
+/* profile's section settings */
 @import url(/blocks/profile/profile.css);
 @import url(/blocks/profile/__picture/profile__picture.css);
 @import url(/blocks/profile/__info/profile__info.css);
@@ -19,5 +19,27 @@
 @import url(/blocks/profile/__about-me/profile__about-me.css);
 @import url(/blocks/profile/__edit-button/profile__edit-button.css);
 @import url(/blocks/profile/__add-button/profile__add-button.css);
-@import url(/blocks/profile/__add-button/profile__plus-sign.css);
+@import url(/blocks/profile/__plus-sign/profile__plus-sign.css);
 
+/* posts' section settings */
+@import url(/blocks/posts/posts.css);
+
+/* post's settings */
+@import url(/blocks/post/post.css);
+@import url(/blocks/post/__image/post__image.css);
+@import url(/blocks/post/__description/post__description.css);
+@import url(/blocks/post/__like-button/post__like-button.css);
+
+/* footer's settings */
+@import url(/blocks/footer/footer.css);
+@import url(/blocks/footer/__author/footer__author.css);
+
+/* form's settings */ 
+@import url(/blocks/form/form.css);
+@import url(/blocks/form/__overlay/form__overlay.css);
+@import url(/blocks/form/__space/form__space.css);
+@import url(/blocks/form/__close-button/form__close-button.css);
+@import url(/blocks/form/__inputs/form__inputs.css);
+@import url(/blocks/form/__title/form__title.css);
+@import url(/blocks/form/__input/form__input.css);
+@import url(/blocks/form/__submit-button/form__submit-button.css);
