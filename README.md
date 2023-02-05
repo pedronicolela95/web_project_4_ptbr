@@ -4,6 +4,7 @@
 
 * Figma
 * Imagens
+* Descrição
 
 **Figma**
 
