@@ -10,6 +10,8 @@ const form = document.querySelector('.form');
 const closeButton = form.querySelector('.form__close-button');
 const submitButton = form.querySelector('.form__submit-button');
 
+// finding love button
+const loveButtons = document.querySelectorAll('.post__like-button');
 
 function OpenCloseForm(evt) {
     
