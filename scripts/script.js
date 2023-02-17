@@ -8,8 +8,6 @@ const editButton = profileInfo.querySelector('.profile__edit-button');
 // finding forms constants
 const profileForm = document.querySelector('#profile-form');
 const profileCloseButton = profileForm.querySelector('.form__close-button');
-const profileSubmitButton = profileForm.querySelector('.form__submit-button');
-
 
 function OpenCloseProfileForm(evt) {
     
@@ -51,15 +49,8 @@ function handleProfileFormSubmit(evt) {
 // clicking buttons
 editButton.addEventListener('click', OpenCloseProfileForm);
 profileCloseButton.addEventListener('click', OpenCloseProfileForm); 
-profileSubmitButton.addEventListener('click', handleProfileFormSubmit);
+profileForm.addEventListener('submit', handleProfileFormSubmit);
 
-// pressing enter
-document.addEventListener('keyup', function(evt) {
-    if (evt.key === 'Enter' && profileForm.classList.contains('form__active')) {
-        evt.preventDefault(); // Prevent to redirect to other webpage
-        profileSubmitButton.click();
-    }
-  });
 
 // creating posts
 
@@ -95,7 +86,6 @@ const initialCards = [
 
   const postForm = document.querySelector('#place-form');
   const postCloseButton = postForm.querySelector('.form__close-button');
-  const postSubmitButton = postForm.querySelector('.form__submit-button');
 
   const addButton = profile.querySelector('.profile__add-button');
 
@@ -175,13 +165,6 @@ function handlePostFormSubmit(evt) {
 // clicking buttons
 addButton.addEventListener('click', OpenClosePostForm);
 postCloseButton.addEventListener('click', OpenClosePostForm); 
-postSubmitButton.addEventListener('click', handlePostFormSubmit);
+postForm.addEventListener('submit', handlePostFormSubmit);
 
-// pressing enter
-document.addEventListener('keyup', function(evt) {
-  if (evt.key === 'Enter' && postForm.classList.contains('form__active')) {
-      evt.preventDefault(); // Prevent to redirect to other webpage
-      postSubmitButton.click();
-  }
-});
 
