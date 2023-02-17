@@ -46,7 +46,6 @@
 @import url(../blocks/form/__submit-button/form__submit-button.css);
 
 /* Zoom's setting */ 
-
 @import url(../blocks/zoom/zoom.css);
 @import url(../blocks/zoom/__overlay/zoom__overlay.css);
 @import url(../blocks/zoom/__space/zoom__space.css);
