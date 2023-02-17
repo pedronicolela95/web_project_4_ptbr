@@ -8,7 +8,7 @@
     </head>
     <body class = "root">
 
-        <div class="form">
+        <div class="form" id="profile-form">
             <div class="form__overlay"></div>
             <form class="form__space">
                 <button>
@@ -23,6 +23,41 @@
                     <input class="form__input" type="text" name="about-me" placeholder="Sobre mim">
                     <button class="form__submit-button" type="submit">Salvar</button>
                 </div>
+            </form>
+        </div>
+
+        <div class="form" id="place-form">
+            <div class="form__overlay"></div>
+            <form class="form__space">
+                <button>
+                    <img   
+                        class="form__close-button"
+                        src="./images/form/close-icon.svg"
+                        alt="Close button logo"/>
+                </button>
+                <div class="form__inputs">
+                    <h3 class="form__title">Novo local</h3>
+                    <input class="form__input" type="text" name="titulo" placeholder="Título">
+                    <input class="form__input" type="text" name="image-link" placeholder="Link da imagem">
+                    <button class="form__submit-button" type="submit">Salvar</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="zoom">
+            <div class="zoom__overlay"></div>
+            <form class="zoom__space">
+                <button>
+                    <img   
+                        class="zoom__close-button"
+                        src="./images/form/close-icon.svg"
+                        alt="Close button logo"/>
+                </button>
+                <img class="zoom__image"
+                    src="https://practicum-content.s3.us-west-1.amazonaws.com/web-code/moved_latemar.jpg"
+                    alt=""/>
+                <h3 class="zoom__description">Teste do Nico</h3>
+                
             </form>
         </div>
 
@@ -58,84 +93,36 @@
         </section>
 
         <ul class="posts">
-            <li class="post">
-                <img class="post__image"
-                    src="./images/posts/vale-de-yosemite.png"
-                    alt="Foto do Vale de Yosemite"/>
-                <h3 class="post__description">Vale de Yosemite</h3>
-                <button>
-                    <img
-                        class="post__like-button"
-                        src="./images/posts/love-button.svg"
-                        alt="Botão de love"/>
-                </button>
-            </li>
-            <li class="post">
-                <img class="post__image"
-                    src="./images/posts/lago-louise.png"
-                    alt="Foto do Lago Louise"/>
-                <h3 class="post__description">Lago Louise</h3>
-                <button>
-                    <img
-                        class="post__like-button"
-                        src="./images/posts/love-button.svg"
-                        alt="Botão de love"/>
-                </button>
-            </li>
-            <li class="post">
-                <img class="post__image"
-                    src="./images/posts/montahas-carecas.png"
-                    alt="Foto do Montanhas Carecas"/>
-                <h3 class="post__description">Montanhas Carecas</h3>
-                <button>
-                    <img
-                        class="post__like-button"
-                        src="./images/posts/love-button.svg"
-                        alt="Botão de love"/>
-                </button>
-            </li>
-            <li class="post">
-                <img class="post__image"
-                    src="./images/posts/latemar.png"
-                    alt="Foto do Latemar"/>
-                <h3 class="post__description">Latemar</h3>
-                <button>
-                    <img
-                        class="post__like-button"
-                        src="./images/posts/love-button.svg"
-                        alt="Botão de love"/>
-                </button>
-            </li>
-            <li class="post">
-                <img class="post__image"
-                    src="./images/posts/parque-nacional-vanoise.png"
-                    alt="Foto do Parque Nacional Vanoise"/>
-                <h3 class="post__description">Parque Nacional Vanoise</h3>
-                <button>
-                    <img
-                        class="post__like-button"
-                        src="./images/posts/love-button.svg"
-                        alt="Botão de love"/>
-                </button>
-            </li>
-            <li class="post">
-                <img class="post__image"
-                    src="./images/posts/lago-di-braies.png"
-                    alt="Foto do Lago di Braies"/>
-                <h3 class="post__description">Lago di Braies</h3>
-                <button>
-                    <img
-                        class="post__like-button"
-                        src="./images/posts/love-button.svg"
-                        alt="Botão de love"/>
-                </button>
-            </li>
+            <!-- Adding the post images using the template below -->
         </ul>
 
         <footer class="footer">
             <p class="footer__author">© 2023 Around The U.S.</p>
         </footer>
 
+        <template id="post">
+            <li class="post">
+                <img class="post__image"
+                    src=""
+                    alt=""/>
+                <h3 class="post__description"></h3>
+                <button>
+                    <img
+                        class="post__delete-button"
+                        src="./images/posts/delete-button.svg"
+                        alt="Botão de deletar"/>
+                </button>
+                <button>
+                    <img
+                        class="post__like-button"
+                        src="./images/posts/love-button.svg"
+                        alt="Botão de love"/>
+                </button>
+            </li>
+        </template>   
+        
+        
         <script src="./scripts/script.js"></script>
+             
     </body>
 </html>

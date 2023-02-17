@@ -26,6 +26,7 @@
 
 /* post's settings */
 @import url(../blocks/post/post.css);
+@import url(../blocks/post/__delete-button/post__delete-button.css);
 @import url(../blocks/post/__image/post__image.css);
 @import url(../blocks/post/__description/post__description.css);
 @import url(../blocks/post/__like-button/post__like-button.css);
@@ -43,3 +44,12 @@
 @import url(../blocks/form/__title/form__title.css);
 @import url(../blocks/form/__input/form__input.css);
 @import url(../blocks/form/__submit-button/form__submit-button.css);
+
+/* Zoom's setting */ 
+
+@import url(../blocks/zoom/zoom.css);
+@import url(../blocks/zoom/__overlay/zoom__overlay.css);
+@import url(../blocks/zoom/__space/zoom__space.css);
+@import url(../blocks/zoom/__close-button/zoom__close-button.css);
+@import url(../blocks/zoom/__image/zoom__image.css);
+@import url(../blocks/zoom/__description/zoom__description.css);
