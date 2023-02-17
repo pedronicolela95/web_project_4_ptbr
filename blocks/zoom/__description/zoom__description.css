@@ -1,12 +1,12 @@
-.zoom__description{
-    width: 100%;
-    margin: 0;
-    margin-top: 10px;
-    align-items: right;
-    background-color: transparent;
-    color: white;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 15px;
+.zoom__description {
+  width: 100%;
+  margin: 0;
+  margin-top: 10px;
+  align-items: right;
+  background-color: transparent;
+  color: white;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
 }

@@ -1,128 +1,148 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Around the USA</title>
-        <link rel="stylesheet" href="./pages/index.css" />
-    </head>
-    <body class = "root">
-
-        <div class="form" id="profile-form">
-            <div class="form__overlay"></div>
-            <form class="form__space">
-                <button>
-                    <img   
-                        class="form__close-button"
-                        src="./images/form/close-icon.svg"
-                        alt="Close button logo"/>
-                </button>
-                <div class="form__inputs">
-                    <h3 class="form__title">Editar perfil</h3>
-                    <input class="form__input" type="text" name="name" placeholder="Nome">
-                    <input class="form__input" type="text" name="about-me" placeholder="Sobre mim">
-                    <button class="form__submit-button" type="submit">Salvar</button>
-                </div>
-            </form>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Around the USA</title>
+    <link rel="stylesheet" href="./pages/index.css" />
+  </head>
+  <body class="root">
+    <div class="form" id="profile-form">
+      <div class="form__overlay"></div>
+      <form class="form__space">
+        <button>
+          <img
+            class="form__close-button"
+            src="./images/form/close-icon.svg"
+            alt="Close button logo"
+          />
+        </button>
+        <div class="form__inputs">
+          <h3 class="form__title">Editar perfil</h3>
+          <input
+            class="form__input"
+            type="text"
+            name="name"
+            placeholder="Nome"
+          />
+          <input
+            class="form__input"
+            type="text"
+            name="about-me"
+            placeholder="Sobre mim"
+          />
+          <button class="form__submit-button" type="submit">Salvar</button>
         </div>
+      </form>
+    </div>
 
-        <div class="form" id="place-form">
-            <div class="form__overlay"></div>
-            <form class="form__space">
-                <button>
-                    <img   
-                        class="form__close-button"
-                        src="./images/form/close-icon.svg"
-                        alt="Close button logo"/>
-                </button>
-                <div class="form__inputs">
-                    <h3 class="form__title">Novo local</h3>
-                    <input class="form__input" type="text" name="titulo" placeholder="Título">
-                    <input class="form__input" type="text" name="image-link" placeholder="Link da imagem">
-                    <button class="form__submit-button" type="submit">Salvar</button>
-                </div>
-            </form>
+    <div class="form" id="place-form">
+      <div class="form__overlay"></div>
+      <form class="form__space">
+        <button>
+          <img
+            class="form__close-button"
+            src="./images/form/close-icon.svg"
+            alt="Close button logo"
+          />
+        </button>
+        <div class="form__inputs">
+          <h3 class="form__title">Novo local</h3>
+          <input
+            class="form__input"
+            type="text"
+            name="titulo"
+            placeholder="Título"
+          />
+          <input
+            class="form__input"
+            type="text"
+            name="image-link"
+            placeholder="Link da imagem"
+          />
+          <button class="form__submit-button" type="submit">Salvar</button>
         </div>
+      </form>
+    </div>
 
-        <div class="zoom">
-            <div class="zoom__overlay"></div>
-            <form class="zoom__space">
-                <button>
-                    <img   
-                        class="zoom__close-button"
-                        src="./images/form/close-icon.svg"
-                        alt="Close button logo"/>
-                </button>
-                <img class="zoom__image"
-                    src=" "
-                    alt=" "/>
-                <h3 class="zoom__description">Teste do Nico</h3>
-                
-            </form>
-        </div>
+    <div class="zoom">
+      <div class="zoom__overlay"></div>
+      <form class="zoom__space">
+        <button>
+          <img
+            class="zoom__close-button"
+            src="./images/form/close-icon.svg"
+            alt="Close button logo"
+          />
+        </button>
+        <img class="zoom__image" src=" " alt=" " />
+        <h3 class="zoom__description">Teste do Nico</h3>
+      </form>
+    </div>
 
-        <header class="header">
-            <img
-                class="header__image"
-                src="./images/header/__image.svg"
-                alt="Around USA logo"
-            />
-        </header>
+    <header class="header">
+      <img
+        class="header__image"
+        src="./images/header/__image.svg"
+        alt="Around USA logo"
+      />
+    </header>
 
-        <section class="profile">
-            <img 
-                class="profile__picture"
-                src="./images/profile/profile__picture.png"
-                alt="User profile picture" />
-            <div class="profile__info">
-                <h3 class="profile__name">Jacques Cousteau</h3>
-                <h5 class="profile__about-me">Explorador</h5>
-                <button>
-                    <img
-                        class="profile__edit-button"
-                        src="./images/profile/edit_button.svg"
-                        alt="Edit Button logo"/>
-                </button>
-            </div>
-            <button class="profile__add-button">
-                <img   
-                    class="profile__plus-sign"
-                    src="./images/profile/plus-sign.svg"
-                    alt="Add Button logo"/>
-            </button>
-        </section>
+    <section class="profile">
+      <img
+        class="profile__picture"
+        src="./images/profile/profile__picture.png"
+        alt="User profile picture"
+      />
+      <div class="profile__info">
+        <h3 class="profile__name">Jacques Cousteau</h3>
+        <h5 class="profile__about-me">Explorador</h5>
+        <button>
+          <img
+            class="profile__edit-button"
+            src="./images/profile/edit_button.svg"
+            alt="Edit Button logo"
+          />
+        </button>
+      </div>
+      <button class="profile__add-button">
+        <img
+          class="profile__plus-sign"
+          src="./images/profile/plus-sign.svg"
+          alt="Add Button logo"
+        />
+      </button>
+    </section>
 
-        <ul class="posts">
-            <!-- Adding the post images using the template below -->
-        </ul>
+    <ul class="posts">
+      <!-- Adding the post images using the template below -->
+    </ul>
 
-        <footer class="footer">
-            <p class="footer__author">© 2023 Around The U.S.</p>
-        </footer>
+    <footer class="footer">
+      <p class="footer__author">© 2023 Around The U.S.</p>
+    </footer>
 
-        <template id="post">
-            <li class="post">
-                <img class="post__image"
-                    src=" "
-                    alt=" "/>
-                <h3 class="post__description"></h3>
-                <button>
-                    <img
-                        class="post__delete-button"
-                        src="./images/posts/delete-button.svg"
-                        alt="Botão de deletar"/>
-                </button>
-                <button>
-                    <img
-                        class="post__like-button"
-                        src="./images/posts/love-button.svg"
-                        alt="Botão de love"/>
-                </button>
-            </li>
-        </template>   
-        
-        
-        <script src="./scripts/script.js"></script>
-             
-    </body>
+    <template id="post">
+      <li class="post">
+        <img class="post__image" src=" " alt=" " />
+        <h3 class="post__description"></h3>
+        <button>
+          <img
+            class="post__delete-button"
+            src="./images/posts/delete-button.svg"
+            alt="Botão de deletar"
+          />
+        </button>
+        <button>
+          <img
+            class="post__like-button"
+            src="./images/posts/love-button.svg"
+            alt="Botão de love"
+          />
+        </button>
+      </li>
+    </template>
+
+    <script src="./scripts/script.js"></script>
+  </body>
 </html>
