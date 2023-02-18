@@ -3,4 +3,5 @@
   width: 282px;
   height: 282px;
   cursor: pointer;
+  border-radius: 10px 10px 0 0;
 }

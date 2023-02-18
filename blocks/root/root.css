@@ -7,7 +7,7 @@
   list-style: none; /* reseting all list styles */
   border: none;
 
-  font-family: "Inter", sans-serif; /*using font imported from https://rsms.me/inter/ */
+  font-family: "Inter", Arial, sans-serif; /*using font imported from https://rsms.me/inter/ */
 }
 
 button {
