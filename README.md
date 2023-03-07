@@ -2,19 +2,18 @@
 
 ### Visão geral
 
-
-* Autor
-* Introdução
-* Objetivos
-* Tecnologias utilizadas
-* Página do github
-* Imagens
+- Autor
+- Introdução
+- Objetivos
+- Tecnologias utilizadas
+- Página do github
+- Imagens
 
 **Autor**
 Pedro Nicolela em fevereiro de 2023.
 
 **Introdução**
-Nesse projetos construimos uma tela semelhante a uma rede social, em que o usuário compartilhou 6 fotos. Essa página web é responsiva e você pode editar o nome, descrição do usuário, além de adicionar ou excluir imagens.
+Nesse projetos construimos uma tela semelhante a uma rede social, em que o usuário compartilhou 6 fotos. Essa página web é responsiva e você pode editar o nome, descrição do usuário, além de adicionar ou excluir imagens. Além disso, adicionamos funções de validação de formulário!
 
 **Objetivos**
 Projeto objetivas aplicar os conhecimentos básicos de JavaScript obtidos no bootcamp Practicum.
