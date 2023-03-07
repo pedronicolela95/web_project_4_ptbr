@@ -1,9 +1,9 @@
-.form__submit-button {
+.popup__button {
   width: min(358px, calc(21.43vw + 169.43px));
   height: min(50.15px, calc(0.74vw + 43.63px));
 
   margin-left: min(36px, calc(2.5vw + 14px));
-  margin-top: min(48px, calc(0.36vw + 44.86px));
+  margin-top: 31px;
   margin-bottom: min(36.51px, calc(2.06vw + 18.42px));
 
   cursor: pointer;
@@ -18,6 +18,6 @@
   transition: opacity linear 0.5s;
 }
 
-.form__submit-button:hover {
+.popup__button:hover {
   opacity: 0.8;
 }

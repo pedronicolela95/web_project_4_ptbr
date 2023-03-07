@@ -35,20 +35,22 @@
 @import url(../blocks/footer/footer.css);
 @import url(../blocks/footer/__author/footer__author.css);
 
-/* form's settings */
-@import url(../blocks/form/form.css);
-@import url(../blocks/form/__overlay/form__overlay.css);
-@import url(../blocks/form/__space/form__space.css);
-@import url(../blocks/form/__close-button/form__close-button.css);
-@import url(../blocks/form/__inputs/form__inputs.css);
-@import url(../blocks/form/__title/form__title.css);
-@import url(../blocks/form/__input/form__input.css);
-@import url(../blocks/form/__submit-button/form__submit-button.css);
+/* popups's settings */
+@import url(../blocks/popup/popup.css);
+@import url(../blocks/popup/__overlay/popup__overlay.css);
+@import url(../blocks/popup/__form/popup__form.css);
+@import url(../blocks/popup/__close-button/popup__close-button.css);
+@import url(../blocks/popup/__inputs/popup__inputs.css);
+@import url(../blocks/popup/__title/popup__title.css);
+@import url(../blocks/popup/__input/popup__input.css);
+@import url(../blocks/popup/__input/_type_error/popup__input_type_error.css);
+@import url(../blocks/popup/__error/popup__error.css);
+@import url(../blocks/popup/__error/_visible/popup__error_visible.css);
+@import url(../blocks/popup/__button/popup__button.css);
+@import url(../blocks/popup/__button/_disabled/popup__button_disabled.css);
 
 /* Zoom's setting */
-@import url(../blocks/zoom/zoom.css);
-@import url(../blocks/zoom/__overlay/zoom__overlay.css);
-@import url(../blocks/zoom/__space/zoom__space.css);
-@import url(../blocks/zoom/__close-button/zoom__close-button.css);
-@import url(../blocks/zoom/__image/zoom__image.css);
-@import url(../blocks/zoom/__description/zoom__description.css);
+@import url(../blocks/popup/__zoom/popup__zoom.css);
+@import url(../blocks/popup/__image/popup__image.css);
+@import url(../blocks/popup/__description/popup__description.css);
+@import url(../blocks/popup/__close-button/_zoom/popup__close-button_zoom.css);

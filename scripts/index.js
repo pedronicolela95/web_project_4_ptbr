@@ -1,51 +1,79 @@
-// finding profile's current information
+// default functions to open and close popups
 
+const checkEscape = (evt) => {
+  if (evt.key == "Escape") {
+    closePopup();
+  }
+};
+
+const checkOverlay = (evt, popup) => {
+  if (evt.target.classList.contains("popup__overlay")) {
+    closePopup();
+  }
+};
+
+const closePopup = () => {
+  const openedPopup = document.querySelector(".popup__active");
+
+  if (openedPopup) {
+    document.removeEventListener("keydown", checkEscape);
+    document.removeEventListener("click", checkOverlay);
+    openedPopup.classList.remove("popup__active");
+  }
+};
+
+const openPopup = (popup) => {
+  popup.classList.add("popup__active");
+  document.addEventListener("keydown", checkEscape);
+  document.addEventListener("click", checkOverlay);
+};
+
+// Working with profile's information
+
+// finding profile's current information
 const profile = document.querySelector(".profile");
 const profileInfo = profile.querySelector(".profile__info");
 const editButton = profileInfo.querySelector(".profile__edit-button");
 
-// finding forms constants
+// finding profile form constants
 const profileForm = document.querySelector("#profile-form");
-const profileCloseButton = profileForm.querySelector(".form__close-button");
+const profileCloseButton = profileForm.querySelector(".popup__close-button");
 
-function OpenCloseProfileForm(evt) {
+const getProfileInfo = () => {
+  let infos = {
+    profileName: profileInfo.querySelector(".profile__name"),
+    profileAboutMe: profileInfo.querySelector(".profile__about-me"),
+    inputName: profileForm.querySelector("#name-input"),
+    inputAboutMe: profileForm.querySelector("#about-me-input"),
+  };
+  return infos;
+};
+
+const openProfileForm = (evt) => {
+  infos = getProfileInfo();
+
+  infos.inputName.value = infos.profileName.textContent;
+  infos.inputAboutMe.value = infos.profileAboutMe.textContent;
+
+  openPopup(profileForm);
+};
+
+const handleProfileFormSubmit = (evt) => {
   evt.preventDefault();
+  infos = getProfileInfo();
 
-  // finding current information
-  const profileName = profileInfo.querySelector(".profile__name");
-  const profileAboutMe = profileInfo.querySelector(".profile__about-me");
+  infos.profileName.textContent = infos.inputName.value;
+  infos.profileAboutMe.textContent = infos.inputAboutMe.value;
 
-  // getting inputs information
-  const inputName = profileForm.querySelector('input[name="name"]');
-  const inputAboutMe = profileForm.querySelector('input[name="about-me"]');
+  closePopup();
+};
 
-  inputName.value = profileName.textContent;
-  inputAboutMe.value = profileAboutMe.textContent;
-
-  profileForm.classList.toggle("form__active");
-}
-
-function handleProfileFormSubmit(evt) {
-  evt.preventDefault();
-
-  // finding current information
-  const profileName = profileInfo.querySelector(".profile__name");
-  const profileAboutMe = profileInfo.querySelector(".profile__about-me");
-
-  // getting inputs information
-  const inputName = profileForm.querySelector('input[name="name"]');
-  const inputAboutMe = profileForm.querySelector('input[name="about-me"]');
-
-  profileName.textContent = inputName.value;
-  profileAboutMe.textContent = inputAboutMe.value;
-
-  profileForm.classList.toggle("form__active");
-}
-
-// clicking buttons
-editButton.addEventListener("click", OpenCloseProfileForm);
-profileCloseButton.addEventListener("click", OpenCloseProfileForm);
+// clicking profile buttons
+editButton.addEventListener("click", openProfileForm);
+profileCloseButton.addEventListener("click", closePopup);
 profileForm.addEventListener("submit", handleProfileFormSubmit);
+
+// Working with image posts
 
 // creating posts
 
@@ -78,29 +106,18 @@ const initialCards = [
 
 // variable to create posts
 const postsPlace = document.querySelector(".posts");
-
-const postForm = document.querySelector("#place-form");
-const postCloseButton = postForm.querySelector(".form__close-button");
-
 const addButton = profile.querySelector(".profile__add-button");
+const postForm = document.querySelector("#place-form");
+const postCloseButton = postForm.querySelector(".popup__close-button");
 
-const zoom = document.querySelector(".zoom");
-const zoomSpace = zoom.querySelector(".zoom__space");
-const zoomImage = zoomSpace.querySelector(".zoom__image");
-const zoomDescription = zoomSpace.querySelector(".zoom__description");
-const zoomCloseButton = zoomSpace.querySelector(".zoom__close-button");
-
-// function to open / close zoom
-
-function zoomOpenClose(evt) {
-  evt.preventDefault();
-  zoom.classList.toggle("zoom__active");
-}
-
-zoomCloseButton.addEventListener("click", zoomOpenClose);
+const zoom = document.querySelector("#image-zoom");
+const zoomSpace = zoom.querySelector(".popup__zoom");
+const zoomImage = zoomSpace.querySelector(".popup__image");
+const zoomDescription = zoomSpace.querySelector(".popup__description");
+const zoomCloseButton = zoomSpace.querySelector(".popup__close-button");
 
 // function to create post
-function createPost(name, link) {
+const createPost = (name, link) => {
   const postTemplate = document.querySelector("#post").content;
   const postElement = postTemplate.querySelector(".post").cloneNode(true);
 
@@ -115,7 +132,7 @@ function createPost(name, link) {
       zoomImage.alt = evt.target.alt;
       zoomDescription.textContent = evt.target.nextElementSibling.textContent;
 
-      zoomOpenClose(evt);
+      openPopup(zoom);
     });
 
   postElement
@@ -131,33 +148,36 @@ function createPost(name, link) {
     });
 
   postsPlace.prepend(postElement);
-}
+};
+
+const openPostForm = (evt) => {
+  evt.preventDefault();
+  openPopup(postForm);
+};
+
+const handlePostFormSubmit = (evt) => {
+  evt.preventDefault();
+
+  // getting creating a new post
+  const postTitle = postForm.querySelector("#title-input").value;
+  const postLink = postForm.querySelector("#image-link-input").value;
+
+  createPost(postTitle, postLink);
+
+  postForm.querySelector("#title-input").value = "";
+  postForm.querySelector("#image-link-input").value = "";
+
+  closePopup();
+};
+
+// creating initial posts
 
 initialCards.forEach(function (item) {
   createPost(item.name, item.link);
 });
 
-function OpenClosePostForm(evt) {
-  evt.preventDefault();
-  postForm.classList.toggle("form__active");
-}
-
-function handlePostFormSubmit(evt) {
-  evt.preventDefault();
-
-  // getting creating a new post
-  const postTitle = postForm.querySelector('input[name="titulo"]').value;
-  const postLink = postForm.querySelector('input[name="image-link"]').value;
-
-  createPost(postTitle, postLink);
-
-  postForm.querySelector('input[name="titulo"]').value = "";
-  postForm.querySelector('input[name="image-link"]').value = "";
-
-  postForm.classList.toggle("form__active");
-}
-
 // clicking buttons
-addButton.addEventListener("click", OpenClosePostForm);
-postCloseButton.addEventListener("click", OpenClosePostForm);
+addButton.addEventListener("click", openPostForm);
+postCloseButton.addEventListener("click", closePopup);
 postForm.addEventListener("submit", handlePostFormSubmit);
+zoomCloseButton.addEventListener("click", closePopup);

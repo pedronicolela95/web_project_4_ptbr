@@ -1,4 +1,4 @@
-.form__title {
+.popup__title {
   background-color: white;
 
   font-family: "Inter", Arial, sans-serif;
@@ -14,7 +14,7 @@
 }
 
 @media screen and (max-width: 880px) {
-  .form__title {
+  .popup__title {
     margin-bottom: calc(-3.93vw + 88.57px);
   }
 }

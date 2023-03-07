@@ -1,5 +1,6 @@
 .post__image {
   background-color: transparent;
+  object-fit: cover;
   width: 282px;
   height: 282px;
   cursor: pointer;

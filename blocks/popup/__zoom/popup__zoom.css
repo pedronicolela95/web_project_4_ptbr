@@ -1,4 +1,4 @@
-.zoom__space {
+.popup__zoom {
   z-index: 3;
   background-color: transparent;
   display: flex;
@@ -8,4 +8,5 @@
   align-items: flex-end;
 
   position: relative;
+  pointer-events: none;
 }
