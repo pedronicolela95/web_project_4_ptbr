@@ -1,14 +1,7 @@
 // importing functions from utils
+import PopupWithImage from "./PopupWithImage.js";
 
-import { openPopup } from "./utils.js";
-
-// variable to create Zoom
-const zoom = document.querySelector("#image-zoom");
-const zoomSpace = zoom.querySelector(".popup__zoom");
-const zoomImage = zoomSpace.querySelector(".popup__image");
-const zoomDescription = zoomSpace.querySelector(".popup__description");
-
-class Card {
+export default class Card {
   constructor(name, link, templateSelector) {
     this._name = name;
     this._link = link;
@@ -34,11 +27,12 @@ class Card {
     this._element
       .querySelector(".post__image")
       .addEventListener("click", function (evt) {
-        zoomImage.src = evt.target.src;
-        zoomImage.alt = evt.target.alt;
-        zoomDescription.textContent = evt.target.nextElementSibling.textContent;
-
-        openPopup(zoom);
+        const popupImage = new PopupWithImage("#image-zoom", {
+          image: evt.target.src,
+          imageAlt: evt.target.alt,
+          legend: evt.target.nextElementSibling.textContent,
+        });
+        popupImage.open();
       });
   }
 
@@ -74,5 +68,3 @@ class Card {
     return this._element;
   }
 }
-
-export { Card };

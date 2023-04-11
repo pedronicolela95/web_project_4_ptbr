@@ -1,52 +1,40 @@
-// default functions to open and close popups - Já está em utils
+import {
+  initialCards,
+  cardListSelector,
+  validationVariables,
+  profileFormSelector,
+  editButton,
+  profileName,
+  profileAboutMe,
+  postFormSelector,
+  addButton,
+} from "../utils/constants.js";
 
-import { createPost } from "./utils.js";
+import Card from "../components/Card.js";
+import Section from "../components/Section.js";
 
-import { FormValidator } from "./FormValidator.js";
+import { FormValidator } from "../components/FormValidator.js";
 
-// creating posts
+import PopupWithForm from "../components/PopupWithForm.js";
+import UserInfo from "../components/UserInfo.js";
 
-const initialCards = [
+// creating new cards
+
+const defaultCards = new Section(
   {
-    name: "Vale de Yosemite",
-    link: "https://practicum-content.s3.us-west-1.amazonaws.com/web-code/moved_yosemite.jpg",
+    items: initialCards,
+    renderer: (item) => {
+      const card = new Card(item.name, item.link, "#post");
+      const cardElement = card.createPost();
+      defaultCards.setItem(cardElement);
+    },
   },
-  {
-    name: "Lago Louise",
-    link: "https://practicum-content.s3.us-west-1.amazonaws.com/web-code/moved_lake-louise.jpg",
-  },
-  {
-    name: "Montanhas Carecas",
-    link: "https://practicum-content.s3.us-west-1.amazonaws.com/web-code/moved_bald-mountains.jpg",
-  },
-  {
-    name: "Latemar",
-    link: "https://practicum-content.s3.us-west-1.amazonaws.com/web-code/moved_latemar.jpg",
-  },
-  {
-    name: "Parque Nacional da Vanoise ",
-    link: "https://practicum-content.s3.us-west-1.amazonaws.com/web-code/moved_vanoise.jpg",
-  },
-  {
-    name: "Lago di Braies",
-    link: "https://practicum-content.s3.us-west-1.amazonaws.com/web-code/moved_lago.jpg",
-  },
-];
+  cardListSelector
+);
 
-initialCards.forEach(function (item) {
-  createPost(item.name, item.link);
-});
+defaultCards.renderItems();
 
-// creating form validations
-
-const validationVariables = {
-  formSelector: ".popup__form",
-  inputSelector: ".popup__input",
-  submitButtonSelector: ".popup__button",
-  inactiveButtonClass: "popup__button_disabled",
-  inputErrorClass: "popup__input_type_error",
-  errorClass: "popup__error_visible",
-};
+// creating form validator
 
 const formList = Array.from(
   document.querySelectorAll(validationVariables.formSelector)
@@ -63,3 +51,34 @@ const pageValidation = (formList) => {
 };
 
 pageValidation(formList);
+
+// creating profile form
+
+const profileForm = new PopupWithForm(
+  profileFormSelector,
+  (name, description) => {
+    let userInfoForm = new UserInfo({ name, description });
+    userInfoForm.setUserInfo();
+  }
+);
+
+editButton.addEventListener("click", () => {
+  let userInfoForm = new UserInfo({
+    name: profileName.textContent,
+    description: profileAboutMe.textContent,
+  });
+  userInfoForm.getUserInfo();
+  profileForm.open();
+});
+
+// creating add new post form
+
+const postForm = new PopupWithForm(postFormSelector, (name, link) => {
+  let newCard = new Card(name, link, "#post");
+  let newCardElement = newCard.createPost();
+  defaultCards.setItem(newCardElement);
+});
+
+addButton.addEventListener("click", () => {
+  postForm.open();
+});
