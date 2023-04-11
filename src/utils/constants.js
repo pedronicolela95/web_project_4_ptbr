@@ -66,6 +66,41 @@ const zoomSpace = zoom.querySelector(".popup__zoom");
 const zoomImage = zoomSpace.querySelector(".popup__image");
 const zoomDescription = zoomSpace.querySelector(".popup__description");
 
+/// images
+
+const headerImageImg = new URL("../images/header/__image.svg", import.meta.url);
+const closeIconImg = new URL("../images/popup/close-icon.svg", import.meta.url);
+const deleteButtonImg = new URL(
+  "../images/posts/delete-button.svg",
+  import.meta.url
+);
+const editButtonImg = new URL(
+  "../images/profile/edit_button.svg",
+  import.meta.url
+);
+const plutSignImg = new URL("../images/profile/plus-sign.svg", import.meta.url);
+const profilePictureImg = new URL(
+  "../images/profile/profile__picture.png",
+  import.meta.url
+);
+
+const imagesToLoad = [
+  { paths: document.querySelectorAll(".header__image"), src: headerImageImg },
+  {
+    paths: document.querySelectorAll(".popup__close-button"),
+    src: closeIconImg,
+  },
+  {
+    paths: document.querySelectorAll(".profile__edit-button"),
+    src: editButtonImg,
+  },
+  { paths: document.querySelectorAll(".profile__plus-sign"), src: plutSignImg },
+  {
+    paths: document.querySelectorAll(".profile__picture"),
+    src: profilePictureImg,
+  },
+];
+
 export {
   initialCards,
   cardListSelector,
@@ -80,4 +115,5 @@ export {
   addButton,
   zoomImage,
   zoomDescription,
+  imagesToLoad,
 };

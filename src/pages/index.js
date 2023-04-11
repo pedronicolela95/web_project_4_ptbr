@@ -1,3 +1,5 @@
+import "./index.css";
+
 import {
   initialCards,
   cardListSelector,
@@ -8,6 +10,7 @@ import {
   profileAboutMe,
   postFormSelector,
   addButton,
+  imagesToLoad,
 } from "../utils/constants.js";
 
 import Card from "../components/Card.js";
@@ -17,6 +20,14 @@ import { FormValidator } from "../components/FormValidator.js";
 
 import PopupWithForm from "../components/PopupWithForm.js";
 import UserInfo from "../components/UserInfo.js";
+
+// load images
+
+imagesToLoad.forEach((item) => {
+  item.paths.forEach((path) => {
+    path.src = item.src;
+  });
+});
 
 // creating new cards
 

@@ -4,18 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Around the USA</title>
-    <link rel="stylesheet" href="./pages/index.css" />
   </head>
   <body class="root">
     <div class="popup" id="profile-form">
       <div class="popup__overlay"></div>
       <form class="popup__form">
         <button>
-          <img
-            class="popup__close-button"
-            src="./images/popup/close-icon.svg"
-            alt="Close button logo"
-          />
+          <img class="popup__close-button" alt="Close button logo" />
         </button>
         <div class="popup__inputs">
           <h3 class="popup__title">Editar perfil</h3>
@@ -46,11 +41,7 @@
       <div class="popup__overlay"></div>
       <form class="popup__form">
         <button>
-          <img
-            class="popup__close-button"
-            src="./images/popup/close-icon.svg"
-            alt="Close button logo"
-          />
+          <img class="popup__close-button" alt="Close button logo" />
         </button>
         <div class="popup__inputs">
           <h3 class="popup__title">Novo local</h3>
@@ -82,7 +73,6 @@
         <button>
           <img
             class="popup__close-button popup__close-button_zoom"
-            src="./images/popup/close-icon.svg"
             alt="Close button logo"
           />
         </button>
@@ -92,36 +82,20 @@
     </div>
 
     <header class="header">
-      <img
-        class="header__image"
-        src="./images/header/__image.svg"
-        alt="Around USA logo"
-      />
+      <img class="header__image" alt="Around USA logo" />
     </header>
 
     <section class="profile">
-      <img
-        class="profile__picture"
-        src="./images/profile/profile__picture.png"
-        alt="User profile picture"
-      />
+      <img class="profile__picture" alt="User profile picture" />
       <div class="profile__info">
         <h3 class="profile__name">Jacques Cousteau</h3>
         <h5 class="profile__about-me">Explorador</h5>
         <button>
-          <img
-            class="profile__edit-button"
-            src="./images/profile/edit_button.svg"
-            alt="Edit Button logo"
-          />
+          <img class="profile__edit-button" alt="Edit Button logo" />
         </button>
       </div>
       <button class="profile__add-button">
-        <img
-          class="profile__plus-sign"
-          src="./images/profile/plus-sign.svg"
-          alt="Add Button logo"
-        />
+        <img class="profile__plus-sign" alt="Add Button logo" />
       </button>
     </section>
 
@@ -140,19 +114,20 @@
         <button>
           <img
             class="post__delete-button"
-            src="./images/posts/delete-button.svg"
-            alt="Botão de deletar"
+            src="<%=require('./images/posts/delete-button.svg')%>"
+            alt="Botão de
+          deletar"
           />
         </button>
         <button>
           <img
             class="post__like-button"
-            src="./images/posts/love-button.svg"
+            src="<%=require('./images/posts/love-button.svg')%>"
             alt="Botão de love"
           />
         </button>
       </li>
     </template>
-    <script type="module" src="./pages/index.js"></script>
+    <!-- <script type="module" src="./pages/index.js"></script> -->
   </body>
 </html>
