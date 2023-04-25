@@ -89,4 +89,23 @@ export default class Api {
       return Promise.reject(`Error: ${res.status}`);
     });
   }
+
+  updateProfileImage(profileLink) {
+    const url = this.baseUrl + "/users/me/avatar ";
+    const data = {
+      headers: this.headers,
+      method: "PATCH",
+      body: JSON.stringify({
+        avatar: profileLink.avatar,
+      }),
+    };
+
+    return fetch(url, data).then((res) => {
+      if (res.ok) {
+        return res.json();
+      }
+      // se o servidor retornar um erro, rejeite a promessa
+      return Promise.reject(`Error: ${res.status}`);
+    });
+  }
 }

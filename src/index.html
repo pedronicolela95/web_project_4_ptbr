@@ -37,6 +37,27 @@
       </form>
     </div>
 
+    <div class="popup" id="profile-image">
+      <div class="popup__overlay"></div>
+      <form class="popup__form">
+        <button>
+          <img class="popup__close-button" alt="Close button logo" />
+        </button>
+        <div class="popup__inputs">
+          <h3 class="popup__title">Alterar a foto do perfil</h3>
+          <input
+            class="popup__input"
+            id="image-input"
+            placeholder="Link da imagem"
+            type="url"
+            required
+          />
+          <span class="popup__error image-input-error"></span>
+          <button class="popup__button" type="submit">Salvar</button>
+        </div>
+      </form>
+    </div>
+
     <div class="popup" id="place-form">
       <div class="popup__overlay"></div>
       <form class="popup__form">

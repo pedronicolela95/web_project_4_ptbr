@@ -16,10 +16,12 @@ const validationVariables = {
 
 // finding profile's current information
 const profileFormSelector = "#profile-form";
+const profileImageSelector = "#profile-image";
 
 const profile = document.querySelector(".profile");
 const profileInfo = profile.querySelector(".profile__info");
 const profilePicture = profile.querySelector(".profile__picture");
+const profileImage = profile.querySelector(".profile__image");
 const editButton = profileInfo.querySelector(".profile__edit-button");
 
 // finding profile form constants
@@ -95,4 +97,6 @@ export {
   imagesToLoad,
   apiToken,
   groupId,
+  profileImage,
+  profileImageSelector,
 };

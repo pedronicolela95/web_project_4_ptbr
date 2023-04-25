@@ -12,6 +12,8 @@ import {
   imagesToLoad,
   apiToken,
   groupId,
+  profileImage,
+  profileImageSelector,
 } from "../utils/constants.js";
 
 import Api from "../components/Api.js";
@@ -167,6 +169,32 @@ const postForm = new PopupWithForm(postFormSelector, (inputArray) => {
     });
 });
 
+const profileImageForm = new PopupWithForm(
+  profileImageSelector,
+  (inputArray) => {
+    api
+      .updateProfileImage({
+        avatar: inputArray[0].value,
+      })
+      .then((res) => {
+        let userInfoForm = new UserInfo({
+          name: res.name,
+          description: res.about,
+          avatarLink: res.avatar,
+          id: res._id,
+        });
+        userInfoForm.setUserPicture();
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }
+);
+
 addButton.addEventListener("click", () => {
   postForm.open();
+});
+
+profileImage.addEventListener("click", () => {
+  profileImageForm.open();
 });
