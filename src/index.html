@@ -81,15 +81,32 @@
       </div>
     </div>
 
+    <div class="popup" id="delete-form">
+      <div class="popup__overlay"></div>
+      <form class="popup__form">
+        <button>
+          <img class="popup__close-button" alt="Close button logo" />
+        </button>
+        <div class="popup__inputs">
+          <h3 class="popup__title popup__title_delete-form">Tem certeza?</h3>
+          <button class="popup__button" type="submit">Sim</button>
+        </div>
+      </form>
+    </div>
+
     <header class="header">
       <img class="header__image" alt="Around USA logo" />
     </header>
 
     <section class="profile">
-      <img class="profile__picture" alt="User profile picture" />
+      <div class="profile__image">
+        <div class="profile__picture-overlay"></div>
+        <img class="profile__edit-picture" alt="Logo" />
+        <img class="profile__picture" alt="User profile picture" />
+      </div>
       <div class="profile__info">
-        <h3 class="profile__name">Jacques Cousteau</h3>
-        <h5 class="profile__about-me">Explorador</h5>
+        <h3 class="profile__name"></h3>
+        <h5 class="profile__about-me"></h5>
         <button>
           <img class="profile__edit-button" alt="Edit Button logo" />
         </button>
@@ -119,13 +136,16 @@
           deletar"
           />
         </button>
-        <button>
-          <img
-            class="post__like-button"
-            src="<%=require('./images/posts/love-button.svg')%>"
-            alt="Botão de love"
-          />
-        </button>
+        <div class="post__likes">
+          <button>
+            <img
+              class="post__like-button"
+              src="<%=require('./images/posts/love-button.svg')%>"
+              alt="Botão de love"
+            />
+          </button>
+          <h6 class="post__like-number">6</h6>
+        </div>
       </li>
     </template>
     <!-- <script type="module" src="./pages/index.js"></script> -->

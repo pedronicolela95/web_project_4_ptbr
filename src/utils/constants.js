@@ -1,32 +1,5 @@
 // creating posts
 
-const initialCards = [
-  {
-    name: "Vale de Yosemite",
-    link: "https://practicum-content.s3.us-west-1.amazonaws.com/web-code/moved_yosemite.jpg",
-  },
-  {
-    name: "Lago Louise",
-    link: "https://practicum-content.s3.us-west-1.amazonaws.com/web-code/moved_lake-louise.jpg",
-  },
-  {
-    name: "Montanhas Carecas",
-    link: "https://practicum-content.s3.us-west-1.amazonaws.com/web-code/moved_bald-mountains.jpg",
-  },
-  {
-    name: "Latemar",
-    link: "https://practicum-content.s3.us-west-1.amazonaws.com/web-code/moved_latemar.jpg",
-  },
-  {
-    name: "Parque Nacional da Vanoise ",
-    link: "https://practicum-content.s3.us-west-1.amazonaws.com/web-code/moved_vanoise.jpg",
-  },
-  {
-    name: "Lago di Braies",
-    link: "https://practicum-content.s3.us-west-1.amazonaws.com/web-code/moved_lago.jpg",
-  },
-];
-
 const cardListSelector = ".posts";
 const postFormSelector = "#place-form";
 
@@ -46,6 +19,7 @@ const profileFormSelector = "#profile-form";
 
 const profile = document.querySelector(".profile");
 const profileInfo = profile.querySelector(".profile__info");
+const profilePicture = profile.querySelector(".profile__picture");
 const editButton = profileInfo.querySelector(".profile__edit-button");
 
 // finding profile form constants
@@ -79,8 +53,8 @@ const editButtonImg = new URL(
   import.meta.url
 );
 const plutSignImg = new URL("../images/profile/plus-sign.svg", import.meta.url);
-const profilePictureImg = new URL(
-  "../images/profile/profile__picture.png",
+const editImageButton = new URL(
+  "../images/profile/edit-picture.svg",
   import.meta.url
 );
 
@@ -96,19 +70,22 @@ const imagesToLoad = [
   },
   { paths: document.querySelectorAll(".profile__plus-sign"), src: plutSignImg },
   {
-    paths: document.querySelectorAll(".profile__picture"),
-    src: profilePictureImg,
+    paths: document.querySelectorAll(".profile__edit-picture"),
+    src: editImageButton,
   },
 ];
 
+const apiToken = "30daf07f-92e8-4bf2-9f92-48f8d54dd26d";
+const groupId = "web_ptbr_cohort_03";
+
 export {
-  initialCards,
   cardListSelector,
   validationVariables,
   profileFormSelector,
   editButton,
   profileName,
   profileAboutMe,
+  profilePicture,
   inputName,
   inputAboutMe,
   postFormSelector,
@@ -116,4 +93,6 @@ export {
   zoomImage,
   zoomDescription,
   imagesToLoad,
+  apiToken,
+  groupId,
 };

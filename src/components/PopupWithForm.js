@@ -16,11 +16,10 @@ export default class PopupWithForm extends Popup {
     evt.preventDefault();
     const _variables = this._getInputValues();
 
-    if (_variables[0].value) {
-      this._submitForm(
-        this._getInputValues()[0].value,
-        this._getInputValues()[1].value
-      );
+    if (_variables[0]) {
+      this._submitForm(_variables);
+    } else {
+      this._submitForm();
     }
     this.close();
   }
